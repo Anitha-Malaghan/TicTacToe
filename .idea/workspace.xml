@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e01dd31-0b8c-4eb0-b1a8-c028cc8f4aa5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TicTacToe.iml" afterDir="false" />
+    <list default="true" id="3e01dd31-0b8c-4eb0-b1a8-c028cc8f4aa5" name="Changes" comment="First Stage">
       <change afterPath="$PROJECT_DIR$/src/Controller/GameController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exception/InvalidGameDimensionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factories/PlayerFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Bot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/BotDifficultyLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/CellState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/GameStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/PlayerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Strategies/BotPlayingStrategy/BotPlayingStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Strategies/GamePlayingStrategy/GameWinningStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TicTacToeGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Strategies/GamePlayingStrategy/OrderOneGameWinningStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Strategies/GamePlayingStrategy/GameWinningStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Strategies/GamePlayingStrategy/GameWinningStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TicTacToeGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,29 +33,29 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2XZM86EGYkeMs5dzr53XeaR6nEy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Models" />
@@ -97,11 +83,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698831989104</updated>
-      <workItem from="1698831990162" duration="13660000" />
+      <workItem from="1698831990162" duration="14544000" />
+      <workItem from="1698861719408" duration="2340000" />
+      <workItem from="1698887222298" duration="513000" />
+      <workItem from="1698888599573" duration="3755000" />
+      <workItem from="1698892883309" duration="596000" />
+      <workItem from="1698904306361" duration="10937000" />
     </task>
+    <task id="LOCAL-00001" summary="First Stage">
+      <option name="closed" value="true" />
+      <created>1698861007838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698861007838</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Stage" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Stage" />
   </component>
 </project>

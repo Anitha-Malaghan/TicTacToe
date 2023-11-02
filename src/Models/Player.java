@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Scanner;
+
 public class Player {
     private  char symbol;
     private String name;
@@ -32,5 +34,18 @@ public class Player {
 
     public void setType(PlayerType type) {
         this.type = type;
+    }
+
+    //how will decide the move. based on the available move
+    public Move decideMove() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter the row to make move : ");
+        int row = scanner.nextInt();
+
+        System.out.println("Enter the col to make a move : ");
+        int col = scanner.nextInt();
+
+        return new Move(this,new Cell(row, col));
+
     }
 }

@@ -4,6 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 import Exception.InvalidGameDimensionException;
+import Strategies.GamePlayingStrategy.GameWinningStrategy;
+import Strategies.GamePlayingStrategy.OrderOneGameWinningStrategy;
 
 public class Game {
     private Board board;
@@ -11,14 +13,25 @@ public class Game {
     private List<Move> moves;
     private GameStatus gameStatus;
     private int nextPlayerIndex;
-    private Player winner;
+    private Player winningPlayer;
 
     public Player getWinner() {
-        return winner;
+        return winningPlayer;
     }
 
     public void setWinner(Player winner) {
-        this.winner = winner;
+        this.winningPlayer = winner;
+    }
+
+    //who should have the game winning strategy: game
+    private GameWinningStrategy gameWinningStrategy;
+
+    public GameWinningStrategy getGameWinningStrategy() {
+        return gameWinningStrategy;
+    }
+
+    public void setGameWinningStrategy(GameWinningStrategy gameWinningStrategy) {
+        this.gameWinningStrategy = gameWinningStrategy;
     }
 
     private Game(){}
@@ -28,8 +41,10 @@ public class Game {
     }
 
     public void setBoard(Board board) {
+
         this.board = board;
     }
+
 
     public List<Player> getPlayers() {
         return players;
@@ -67,6 +82,37 @@ public class Game {
         return new Builder();
     }
 
+    public void makeNextMove() {
+        Player playerWhoMoveItIs = players.get(nextPlayerIndex);
+        System.out.println("It is " + playerWhoMoveItIs.getName() + "'s turn");
+
+        Move move = playerWhoMoveItIs.decideMove();
+
+        // before updating to board and adding into the list of move check if it is available or not.
+        int row = move.getCell().getRow();
+        int col = move.getCell().getCol();
+        if(board.getBoard().get(row).get(col).getCellState().equals(CellState.EMPTY)){
+            //move is valid as cell is empty.
+            board.applyMove(move);
+            moves.add(move);
+
+            //check the winner
+            if(gameWinningStrategy.checkWinner(board, move)){
+                gameStatus = GameStatus.ENDED;
+                winningPlayer = playerWhoMoveItIs;
+            }
+
+
+            // if no winner update next player index and continue..
+            nextPlayerIndex+=1;
+            nextPlayerIndex %=players.size();
+        }else{
+            //throw exception
+        }
+
+
+    }
+
     public static class Builder{
         private int dimension;
         private List<Player> players;
@@ -92,6 +138,7 @@ public class Game {
             game.setPlayers(players);
             game.setMoves(new LinkedList<>());
             game.setNextPlayerIndex(0);
+            game.setGameWinningStrategy(new OrderOneGameWinningStrategy(dimension));
 
             return game;
         }

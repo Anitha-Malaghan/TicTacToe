@@ -22,4 +22,30 @@ public class Board {
     public void setBoard(List<List<Cell>> cells) {
         this.cells = cells;
     }
+
+    public void displayBoard() {
+        //print the board
+        for(int i=0; i<cells.size(); i++){
+            for(int j=0; j<cells.size(); j++){
+                if(cells.get(i).get(j).getCellState().equals(CellState.EMPTY)){
+                    System.out.print("|   |");
+                }else{
+                    System.out.print("| "+cells.get(i).get(j).getPlayer().getSymbol() + " |");
+                }
+            }
+            System.out.println();
+        }
+
+
+    }
+
+    public void applyMove(Move move) {
+        //update the cell in the matrix
+        int row = move.getCell().getRow();
+        int col = move.getCell().getCol();
+
+        this.getBoard().get(row).get(col)
+                .setCellState(CellState.FILLED);
+        this.getBoard().get(row).get(col).setPlayer(move.getPlayer());
+    }
 }

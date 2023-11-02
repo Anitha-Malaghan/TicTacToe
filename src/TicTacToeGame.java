@@ -1,3 +1,4 @@
+import Controller.GameController;
 import Models.*;
 
 import java.util.LinkedList;
@@ -48,17 +49,33 @@ public class TicTacToeGame {
             players.add(player);
 
         }
-        Game game = Game.getBuilder()
+        /*Game game = Game.getBuilder()
                 .setDimension(dimension)
                 .setPlayers(players)
-                .build();
+                .build();*/
+        GameController gameController = new GameController();
+        Game game = gameController.createGame(dimension, players);
+        gameController.setGameStatus(game, GameStatus.IN_PROGRESS);
 
-        while(game.getGameStatus() == GameStatus.IN_PROGRESS){
-            //players will be playing
-            break;
+        while(gameController.getGameStatus(game) == GameStatus.IN_PROGRESS){
+            //players will be playing. first we need to display the board
+            System.out.println("Current Board: ");
+            gameController.displayBoard(game);
+
+            //Do you want to ask for undo?
+            System.out.println("Do you want to undo? y/n");
+            String input = scanner.next();
+
+            if(input.equals("y")) {
+                gameController.undo(game);
+            }else{
+                gameController.executeNextMove(game);
+
+            }
+
         }
-        if(game.getGameStatus() == GameStatus.ENDED){
-           System.out.println("Winning Player: "+ game.getWinner().getName());
+        if(gameController.getGameStatus(game) == GameStatus.ENDED){
+           System.out.println("Winning Player: "+ gameController.getWinnerName(game));
         }else {
             System.out.println("Game has drawn");
         }
